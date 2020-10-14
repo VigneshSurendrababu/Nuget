@@ -21,22 +21,8 @@ steps:
   inputs:
     command: 'restore'
     artifactoryService: 'vigneshs-saas'
+    targetResolveRepo: 'nuget'
     solutionPath: '**/*.sln'
-    collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
-- task: ArtifactoryPublishBuildInfo@1
-  inputs:
-    artifactoryService: 'vigneshs-saas'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-- task: ArtifactoryNuGet@2
-  inputs:
-    command: 'push'
-    artifactoryService: 'vigneshs-saas'
-    targetDeployRepo: 'nuget-local'
-    pathToNupkg: '*.nupkg'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
