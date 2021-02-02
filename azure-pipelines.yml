@@ -37,7 +37,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "**/*"
+            "pattern": "nuget/*"
           }
         ]
       }
