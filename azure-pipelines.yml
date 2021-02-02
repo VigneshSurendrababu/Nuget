@@ -31,13 +31,13 @@ steps:
   inputs:
     command: 'set'
     artifactoryService: 'vigneshs-saas'
-    setProps: 'test=1;test=2'
+    setProps: 'qa=pending;os=linux;setfromado=true'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
         "files": [
           {
-            "pattern": "nuget/*"
+            "pattern": "nuget*/*"
           }
         ]
       }
