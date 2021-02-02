@@ -27,6 +27,20 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true
+- task: ArtifactoryProperties@1
+  inputs:
+    command: 'set'
+    artifactoryService: 'vigneshs-saas'
+    setProps: 'test=1;test=2'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "**/*"
+          }
+        ]
+      }
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
     artifactoryService: 'vigneshs-saas'
