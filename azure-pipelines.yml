@@ -33,6 +33,7 @@ steps:
     artifactoryService: 'vigneshs-saas'
     setProps: 'qa=pending;os=linux;setfromado=true'
     specSource: 'taskConfiguration'
+    localRepo: "nuget-local"
     fileSpec: |
       {
         "files": [
