@@ -31,7 +31,7 @@ steps:
   inputs:
     command: 'set'
     artifactoryService: 'vigneshs-saas'
-    setProps: 'qa=pending;os=linux;setfromado=true'
+    setProps: 'qa=pending;os=linux;setfromado=true;valid=true'
     specSource: 'taskConfiguration'
     localRepo: "nuget-local"
     fileSpec: |
