@@ -32,16 +32,7 @@ steps:
     command: 'set'
     artifactoryService: 'vigneshs-saas'
     setProps: 'qa=pending;os=linux;setfromado=true;valid=true'
-    specSource: 'taskConfiguration'
-    localRepo: "nuget-local"
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "$(localRepo)/*"
-          }
-        ]
-      }
+    specSource: 'taskConfiguration'    
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
     artifactoryService: 'vigneshs-saas'
