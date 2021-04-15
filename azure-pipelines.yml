@@ -17,12 +17,6 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: JfrogCli@1
-  inputs:
-    artifactoryService: 'vigneshs-saas'
-    useCustomVersion: true
-    cliVersion: '$(jfrogCliVersion)'
-    command: 'jfrog config'
 - task: ArtifactoryNuGet@2
   inputs:
     command: 'restore'
@@ -32,13 +26,7 @@ steps:
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
-- task: ArtifactoryProperties@1
-  inputs:
-    command: 'set'
-    artifactoryService: 'vigneshs-saas'
-    setProps: 'qa=pending;os=linux;setfromado=true;valid=true'
-    specSource: 'taskConfiguration'    
+    includeEnvVars: true    
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
     artifactoryService: 'vigneshs-saas'
