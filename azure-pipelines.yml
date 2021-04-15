@@ -22,7 +22,7 @@ steps:
     artifactoryService: 'vigneshs-saas'
     useCustomVersion: true
     cliVersion: '$(jfrogCliVersion)'
-    command: 'jfrog rt config'
+    command: 'jfrog config'
 - task: ArtifactoryNuGet@2
   inputs:
     command: 'restore'
